@@ -1,0 +1,63 @@
+﻿<EditForm Model="Options">
+    <Row>
+        <Column ColumnSize="ColumnSize.Is3">
+            <Label>Identifier</Label>
+        </Column>
+        <Column ColumnSize="ColumnSize.Is5">
+            <TextEdit @bind-Text="@(Options.Identifier)" Placeholder="Identifier" />
+        </Column>
+        <Column ColumnSize="ColumnSize.Is3">
+            <Label>Ignore case</Label>
+        </Column>
+        <Column ColumnSize="ColumnSize.Is1">
+            <Check @bind-Checked="@(Options.IgnoreIdentifierCase)" />
+        </Column>
+    </Row>
+    <Row>
+        <Column ColumnSize="ColumnSize.Is3">
+            <Label>Master</Label><span class="badge badge-primary badge-pill">@(Options.MasterPasswordCrc32)</span>
+        </Column>
+        <Column ColumnSize="ColumnSize.Is9">
+            <TextEdit @bind-Text="@(Options.MasterPassword)" Placeholder="Masterpassword" Role="TextRole.Password" />
+        </Column>
+    </Row>
+    <Row>
+        <Column ColumnSize="ColumnSize.Is3">
+            <Label>Prefix</Label>
+        </Column>
+        <Column ColumnSize="ColumnSize.Is3">
+            <TextEdit @bind-Text="@(Options.Prefix)" Placeholder="Prefix" />
+        </Column>
+        <Column ColumnSize="ColumnSize.Is3">
+            <TextEdit @bind-Text="@(Options.Postfix)" Placeholder="Postfix" />
+        </Column>
+        <Column ColumnSize="ColumnSize.Is3">
+            <Label>Postfix</Label>
+        </Column>
+    </Row>
+    <Row>
+        <Column ColumnSize="ColumnSize.Is3">
+            <Label>Password length</Label>
+        </Column>
+        <Column ColumnSize="ColumnSize.Is6">
+            <NumericEdit @bind-Value="@(Options.PasswordLength)" Placeholder="Length" />
+        </Column>
+        <Column ColumnSize="ColumnSize.Is3">
+            <Select @bind-Value="@(Options.Algorithm)" TValue="HashAlgorithmType">
+                <SelectItem Value="@HashAlgorithmType.Sha1">@HashAlgorithmType.Sha1.ToString()</SelectItem>
+            </Select>
+        </Column>
+    </Row>
+    <Row Class="text-center">
+        <Column ColumnSize="ColumnSize.Is12">
+            <TextEdit Text="@GeneratedPassword" ReadOnly="true" Placeholder="Generated password..."></TextEdit>
+        </Column>
+        <Column ColumnSize="ColumnSize.Is12">
+            <Blazorise.Button Color="Color.Primary" Clicked="GenerateClicked">Generate</Blazorise.Button>
+            <Blazorise.Button Color="Color.Success" Clicked="CopyClicked">Copy</Blazorise.Button>
+            <Blazorise.Button Color="Color.Danger" Clicked="ResetClicked">Reset</Blazorise.Button>
+        </Column>
+    </Row>
+</EditForm>
+<SnackbarStack @ref="Toast" Location="SnackbarStackLocation.Right">
+</SnackbarStack>
