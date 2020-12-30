@@ -6,16 +6,13 @@
         <Column ColumnSize="ColumnSize.Is5">
             <TextEdit @ref="Identifier" Autofocus="true" @bind-Text="@(Options.Identifier)" Placeholder="Identifier" />
         </Column>
-        <Column ColumnSize="ColumnSize.Is3">
-            <Label>Ignore case</Label>
-        </Column>
-        <Column ColumnSize="ColumnSize.Is1">
-            <Check @bind-Checked="@(Options.IgnoreIdentifierCase)" />
+        <Column ColumnSize="ColumnSize.Is4">
+            <Check @bind-Checked="@(Options.IgnoreIdentifierCase)">Ignore case</Check>
         </Column>
     </Row>
     <Row>
         <Column ColumnSize="ColumnSize.Is3">
-            <Label>Master</Label><span class="badge badge-primary badge-pill">@(Options.MasterPasswordCrc32)</span>
+            <Label>Master</Label><Badge Pill="true" Color="Color.Primary">@(Options.MasterPasswordCrc32)</Badge>
         </Column>
         <Column ColumnSize="ColumnSize.Is9">
             <TextEdit @bind-Text="@(Options.MasterPassword)" Placeholder="Masterpassword" Role="TextRole.Password" />
