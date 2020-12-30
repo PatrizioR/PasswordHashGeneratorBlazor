@@ -26,8 +26,8 @@ jobs:
     - name: Publish
       run: dotnet publish Client/PasswordHashGenerator.Client.csproj -c Release -o release --nologo
     
-    # changes the base-tag in index.html from '/' to 'BlazorGitHubPagesDemo' to match GitHub Pages repository subdirectory
-    - name: Change base-tag in index.html from / to BlazorGitHubPagesDemo
+    # changes the base-tag in index.html from '/' to 'PasswordHashGeneratorBlazor' to match GitHub Pages repository subdirectory
+    - name: Change base-tag in index.html from / to PasswordHashGeneratorBlazor
       run: sed -i 's/<base href="\/" \/>/<base href="\/PasswordHashGeneratorBlazor\/" \/>/g' release/wwwroot/index.html
     
     # copy index.html to 404.html to serve the same file when a file is not found
