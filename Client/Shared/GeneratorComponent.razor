@@ -4,7 +4,7 @@
             <Label>Identifier</Label>
         </Column>
         <Column ColumnSize="ColumnSize.Is5">
-            <TextEdit @bind-Text="@(Options.Identifier)" Placeholder="Identifier" />
+            <TextEdit @ref="Identifier" Autofocus="true" @bind-Text="@(Options.Identifier)" Placeholder="Identifier" />
         </Column>
         <Column ColumnSize="ColumnSize.Is3">
             <Label>Ignore case</Label>

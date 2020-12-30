@@ -1,4 +1,5 @@
-﻿using Blazorise.Snackbar;
+﻿using Blazorise;
+using Blazorise.Snackbar;
 using CurrieTechnologies.Razor.Clipboard;
 using Microsoft.AspNetCore.Components;
 using PasswordHashGenerator.Shared.Extensions;
@@ -16,6 +17,7 @@ namespace PasswordHashGenerator.Client.Shared
         public SnackbarStack Toast { get; set; }
         public GeneratorOptions Options { get; set; }
         public string GeneratedPassword { get; set; }
+        public TextEdit Identifier { get; set; }
 
         [Inject]
         public ClipboardService clipboard { get; set; }
@@ -25,6 +27,7 @@ namespace PasswordHashGenerator.Client.Shared
             Options.Identifier = null;
             Options.MasterPassword = null;
             GeneratedPassword = null;
+            Identifier.Focus();
             UiSuccess("Reset successful");
         }
 
