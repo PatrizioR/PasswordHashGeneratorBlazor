@@ -1,3 +1,4 @@
+using Blazored.LocalStorage;
 using Blazorise;
 using Blazorise.Bootstrap;
 using Blazorise.Icons.FontAwesome;
@@ -23,7 +24,8 @@ namespace PasswordHashGenerator.Client
                 .AddBlazorise(options => options.ChangeTextOnKeyPress = true)
                 .AddBootstrapProviders()
                 .AddFontAwesomeIcons()
-                .AddClipboard();
+                .AddClipboard()
+                .AddBlazoredLocalStorage();
 
             builder.RootComponents.Add<App>("#app");
 

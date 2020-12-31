@@ -12,10 +12,6 @@ namespace PasswordHashGenerator.Shared.Models
     {
         public GeneratorOptions()
         {
-            PasswordLength = 12;
-            Postfix = "!P";
-            Algorithm = HashAlgorithmType.Sha1;
-            IgnoreIdentifierCase = true;
         }
 
         public string MasterPassword { get; set; }
@@ -27,5 +23,17 @@ namespace PasswordHashGenerator.Shared.Models
         public string Postfix { get; set; }
         public bool IgnoreIdentifierCase { get; set; }
         public HashAlgorithmType Algorithm { get; set; }
+
+        public GeneratorOptions CleanCopy()
+        {
+            return new GeneratorOptions()
+            {
+                PasswordLength = PasswordLength,
+                Prefix = Prefix,
+                Postfix = Postfix,
+                IgnoreIdentifierCase = IgnoreIdentifierCase,
+                Algorithm = Algorithm
+            };
+        }
     }
 }

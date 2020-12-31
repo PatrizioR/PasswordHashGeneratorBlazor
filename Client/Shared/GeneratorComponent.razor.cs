@@ -1,4 +1,5 @@
-﻿using Blazorise;
+﻿using Blazored.LocalStorage;
+using Blazorise;
 using Blazorise.Snackbar;
 using CurrieTechnologies.Razor.Clipboard;
 using Microsoft.AspNetCore.Components;
@@ -14,13 +15,18 @@ namespace PasswordHashGenerator.Client.Shared
 {
     public partial class GeneratorComponent
     {
+        private const string storageKey = "generatorOptions";
+
         public SnackbarStack Toast { get; set; }
-        public GeneratorOptions Options { get; set; }
+        public GeneratorOptions Options { get; set; } = new GeneratorOptions();
         public string GeneratedPassword { get; set; }
         public TextEdit Identifier { get; set; }
 
         [Inject]
-        public ClipboardService clipboard { get; set; }
+        public ClipboardService Clipboard { get; set; }
+
+        [Inject]
+        public ILocalStorageService LocalStorage { get; set; }
 
         public void ResetClicked()
         {
@@ -29,6 +35,12 @@ namespace PasswordHashGenerator.Client.Shared
             GeneratedPassword = null;
             Identifier.Focus();
             UiSuccess("Reset successful");
+        }
+
+        public async Task SaveClicked()
+        {
+            await LocalStorage.SetItemAsync(storageKey, Options.CleanCopy());
+            UiSuccess("Saved successful");
         }
 
         private void UiSuccess(string msg)
@@ -74,7 +86,7 @@ namespace PasswordHashGenerator.Client.Shared
                     throw new NullReferenceException("No password to copy");
                 }
 
-                await clipboard.WriteTextAsync(GeneratedPassword);
+                await Clipboard.WriteTextAsync(GeneratedPassword);
                 UiSuccess("Password copied");
             }
             catch (Exception ex)
@@ -85,7 +97,15 @@ namespace PasswordHashGenerator.Client.Shared
 
         protected override async Task OnInitializedAsync()
         {
-            Options = new GeneratorOptions();
+            var options = new GeneratorOptions();
+            try
+            {
+                options = await LocalStorage.GetItemAsync<GeneratorOptions>(storageKey);
+            }
+            catch (Exception ex)
+            {
+            }
+            Options = options;
             await base.OnInitializedAsync();
         }
     }
