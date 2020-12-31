@@ -1,7 +1,7 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-SO\/fuIIWUxoIu1OABrOpK5n\/AvzxJcg+0H3PT1eutAE=",
+      "hash": "sha256-tn8ht0t0V2hdy6kwTmiUCfARg16s4hTf\/hajPhnSJoE=",
       "url": "css\/app.css"
     },
     {
@@ -81,6 +81,10 @@
       "url": "_content\/Blazorise.Bootstrap\/blazorise.bootstrap.js"
     },
     {
+      "hash": "sha256-+\/IJo9wLK9sTvL8ee9W9w8S1Gkj8rsf\/6yob0uUFAaM=",
+      "url": "_framework\/Blazored.LocalStorage.dll"
+    },
+    {
       "hash": "sha256-imu290P3+M5\/FDTy0+STkgyGDgasodZ5Q6X+1+qDFWw=",
       "url": "_framework\/Blazorise.dll"
     },
@@ -149,7 +153,7 @@
       "url": "_framework\/Microsoft.Extensions.Logging.Abstractions.dll"
     },
     {
-      "hash": "sha256-g1C9Fnh++M4k1mLduCz2yUnf\/70tTCbdZ\/s6bDjsmZM=",
+      "hash": "sha256-0ceIi\/iLdiKoxaztvCC\/4thA\/DazgsgrTETQXY30M3c=",
       "url": "_framework\/Microsoft.Extensions.Options.dll"
     },
     {
@@ -169,11 +173,11 @@
       "url": "_framework\/System.IO.Pipelines.dll"
     },
     {
-      "hash": "sha256-qiMGQTYLfS20bVQ9wAGaHb704DEW67oKvILiphztLRU=",
+      "hash": "sha256-8k3CuT7rqsoTh70TYfuWhsL36k0joWtwGRMKh9MbBjw=",
       "url": "_framework\/PasswordHashGenerator.Shared.dll"
     },
     {
-      "hash": "sha256-UCzej76\/b+FiL3Gw9a1ajOLoymg2OZvFmwZJXdMMZ2k=",
+      "hash": "sha256-eDKng8qHH0HygCEEYlkctMYrvtRomenbDH3OCEQZFTI=",
       "url": "_framework\/PasswordHashGenerator.Client.dll"
     },
     {
@@ -273,19 +277,19 @@
       "url": "_framework\/System.Text.Encodings.Web.dll"
     },
     {
-      "hash": "sha256-A0I0sTqii6upXSQ9FiMFx73y8R+MFABpynRwlXWek0M=",
+      "hash": "sha256-fgdGlk2T4CkbfOtKiHj4q995MSsCdoshriwCMKiCXfY=",
       "url": "_framework\/System.Text.Json.dll"
     },
     {
-      "hash": "sha256-wnp+lAdupWbXgiLLab0TWh3QJLgdgwnjhH4POsHobb8=",
+      "hash": "sha256-F\/+\/\/9McedgIR5YCk\/ju77KMR+P+rtNnss82n2Ug65w=",
       "url": "_framework\/System.Text.RegularExpressions.dll"
     },
     {
-      "hash": "sha256-25VchM\/k2lCfic8jCr9P+EBorWuk2v5mnNKNf9NVHdA=",
+      "hash": "sha256-wwN8pMoa2RVZMHuB0I+Cfs9sWvMvK+4WYJZaUBPr5WE=",
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
-      "hash": "sha256-3hDLzcMZXAek9+Qaw8IlvaZZh13+ZTRbFDkxDotuV+4=",
+      "hash": "sha256-D\/Fas4069b\/hLxYaU5lEDAOSOBFq\/4LWEIgPIE4zKFE=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -293,5 +297,5 @@
       "url": "_framework\/blazor.webassembly.js"
     }
   ],
-  "version": "vUTFUUyP"
+  "version": "XPRbGfob"
 };
