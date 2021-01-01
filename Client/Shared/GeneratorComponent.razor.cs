@@ -97,15 +97,16 @@ namespace PasswordHashGenerator.Client.Shared
 
         protected override async Task OnInitializedAsync()
         {
-            var options = new GeneratorOptions();
+            GeneratorOptions options = null;
             try
             {
                 options = await LocalStorage.GetItemAsync<GeneratorOptions>(storageKey);
             }
             catch (Exception ex)
             {
+                Console.WriteLine($"Cannot read options: {ex.Message}");
             }
-            Options = options;
+            Options = options ?? new GeneratorOptions();
             await base.OnInitializedAsync();
         }
     }
