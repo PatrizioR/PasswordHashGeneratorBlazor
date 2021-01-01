@@ -177,7 +177,7 @@
       "url": "_framework\/PasswordHashGenerator.Shared.dll"
     },
     {
-      "hash": "sha256-v+DQszqKZZhtsLqzGniS3yM5ZyYjZIqzc+7rtTfdlJc=",
+      "hash": "sha256-\/ZIlslE4ja9MxrCc\/OT2dg4J666yYEgsrYcJnGNfVuk=",
       "url": "_framework\/PasswordHashGenerator.Client.dll"
     },
     {
@@ -289,7 +289,7 @@
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
-      "hash": "sha256-xYJDcjiP1SUHziYuZ3SFe1bv3KXIBpS4OwoFi24GdCc=",
+      "hash": "sha256-qlnDaFcmioqFCqA1d4sp0fNpI7F5bpLEwhTLA\/4jU3M=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -297,5 +297,5 @@
       "url": "_framework\/blazor.webassembly.js"
     }
   ],
-  "version": "ruWb\/e4b"
+  "version": "YxoFsgQQ"
 };
