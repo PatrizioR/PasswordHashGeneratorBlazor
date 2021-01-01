@@ -29,11 +29,7 @@ jobs:
     # changes the base-tag in index.html from '/' to 'PasswordHashGeneratorBlazor' to match GitHub Pages repository subdirectory
     - name: Change base-tag in index.html from / to PasswordHashGeneratorBlazor
       run: sed -i 's/<base href="\/" \/>/<base href="\/PasswordHashGeneratorBlazor\/" \/>/g' release/wwwroot/index.html
-   
-    # changes the update date in service-worker.js from {UPDATED} to current date
-    - name: Change service-worker.js
-      run: sed -i 's/{UPDATED}/${{ steps.date.outputs.date }}/g' release/wwwroot/service-worker.js
-        
+
     # copy index.html to 404.html to serve the same file when a file is not found
     - name: copy index.html to 404.html
       run: cp release/wwwroot/index.html release/wwwroot/404.html
