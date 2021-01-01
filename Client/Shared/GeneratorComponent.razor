@@ -46,7 +46,8 @@ else
                 <NumericEdit tabindex="0" @bind-Value="@(Options.PasswordLength)" Placeholder="Length" />
             </Column>
             <Column ColumnSize="ColumnSize.Is3">
-                <Select tabindex="0" @bind-Value="@(Options.Algorithm)" TValue="HashAlgorithmType">
+                <Select tabindex="0" @bind-SelectedValue="@Options.Algorithm">
+                    <SelectItem Value="@HashAlgorithmType.None">@HashAlgorithmType.None.ToString()</SelectItem>
                     <SelectItem Value="@HashAlgorithmType.Sha1">@HashAlgorithmType.Sha1.ToString()</SelectItem>
                 </Select>
             </Column>

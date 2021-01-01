@@ -35,7 +35,9 @@ namespace PasswordHashGenerator.Shared.Generators
 
         public bool IsHandling(HashAlgorithmType algorithmType)
         {
-            return algorithmType == HashAlgorithmType.Sha1;
+            var handled = algorithmType == HashAlgorithmType.Sha1;
+            Console.WriteLine($"Handled: {handled} {algorithmType}");
+            return handled;
         }
     }
 }
