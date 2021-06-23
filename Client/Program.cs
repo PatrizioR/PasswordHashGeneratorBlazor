@@ -32,9 +32,6 @@ namespace PasswordHashGenerator.Client
             builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
             var host = builder.Build();
-            host.Services
-                .UseBootstrapProviders()
-                .UseFontAwesomeIcons();
             await host.RunAsync();
         }
     }

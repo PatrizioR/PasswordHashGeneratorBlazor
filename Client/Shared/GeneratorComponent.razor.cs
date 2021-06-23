@@ -45,22 +45,22 @@ namespace PasswordHashGenerator.Client.Shared
 
         private void UiSuccess(string msg)
         {
-            Toast.Push(msg, SnackbarColor.Success);
+            Toast.PushAsync(msg, SnackbarColor.Success);
         }
 
         private void UiWarning(string msg)
         {
-            Toast.Push(msg, SnackbarColor.Warning);
+            Toast.PushAsync(msg, SnackbarColor.Warning);
         }
 
         private void UiError(string msg)
         {
-            Toast.Push(msg, SnackbarColor.Danger);
+            Toast.PushAsync(msg, SnackbarColor.Danger);
         }
 
         private void UiMessage(string msg, SnackbarColor color)
         {
-            Toast.Push(msg, color);
+            Toast.PushAsync(msg, color);
         }
 
         public void GenerateClicked()

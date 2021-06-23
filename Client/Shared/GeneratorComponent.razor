@@ -10,10 +10,10 @@ else
                 <Label>Identifier</Label>
             </Column>
             <Column ColumnSize="ColumnSize.Is5">
-                <TextEdit tabindex="0" @ref="Identifier" Autofocus="true" @bind-Text="@(Options.Identifier)" Placeholder="Identifier" />
+                <TextEdit @ref="Identifier" Autofocus="true" @bind-Text="@(Options.Identifier)" Placeholder="Identifier" />
             </Column>
             <Column ColumnSize="ColumnSize.Is4">
-                <Check tabindex="-1" @bind-Checked="@(Options.IgnoreIdentifierCase)">Ignore case</Check>
+                <Check @bind-Checked="@(Options.IgnoreIdentifierCase)">Ignore case</Check>
             </Column>
         </Row>
         <Row>
@@ -21,7 +21,7 @@ else
                 <Label>Master</Label><Badge Pill="true" Color="Color.Primary">@(Options.MasterPasswordCrc32)</Badge>
             </Column>
             <Column ColumnSize="ColumnSize.Is9">
-                <TextEdit tabindex="0" @bind-Text="@(Options.MasterPassword)" Placeholder="Masterpassword" Role="TextRole.Password" />
+                <TextEdit @bind-Text="@(Options.MasterPassword)" Placeholder="Masterpassword" Role="TextRole.Password" />
             </Column>
         </Row>
         <Row>
@@ -29,10 +29,10 @@ else
                 <Label>Prefix</Label>
             </Column>
             <Column ColumnSize="ColumnSize.Is3">
-                <TextEdit tabindex="0" @bind-Text="@(Options.Prefix)" Placeholder="Prefix" />
+                <TextEdit @bind-Text="@(Options.Prefix)" Placeholder="Prefix" />
             </Column>
             <Column ColumnSize="ColumnSize.Is3">
-                <TextEdit tabindex="0" @bind-Text="@(Options.Postfix)" Placeholder="Postfix" />
+                <TextEdit @bind-Text="@(Options.Postfix)" Placeholder="Postfix" />
             </Column>
             <Column ColumnSize="ColumnSize.Is3">
                 <Label>Postfix</Label>
@@ -43,10 +43,10 @@ else
                 <Label>Password length</Label>
             </Column>
             <Column ColumnSize="ColumnSize.Is6">
-                <NumericEdit tabindex="0" @bind-Value="@(Options.PasswordLength)" Placeholder="Length" />
+                <NumericEdit @bind-Value="@(Options.PasswordLength)" Placeholder="Length" />
             </Column>
             <Column ColumnSize="ColumnSize.Is3">
-                <Select tabindex="0" @bind-SelectedValue="@Options.Algorithm">
+                <Select @bind-SelectedValue="@Options.Algorithm">
                     <SelectItem Value="@HashAlgorithmType.None">@HashAlgorithmType.None.ToString()</SelectItem>
                     <SelectItem Value="@HashAlgorithmType.Sha1">@HashAlgorithmType.Sha1.ToString()</SelectItem>
                 </Select>
@@ -54,13 +54,13 @@ else
         </Row>
         <Row Class="text-center">
             <Column ColumnSize="ColumnSize.Is12">
-                <TextEdit tabindex="0" Text="@GeneratedPassword" ReadOnly="true" Placeholder="Generated password..."></TextEdit>
+                <TextEdit Text="@GeneratedPassword" ReadOnly="true" Placeholder="Generated password..."></TextEdit>
             </Column>
             <Column ColumnSize="ColumnSize.Is12">
-                <Blazorise.Button tabindex="0" Color="Color.Primary" Clicked="GenerateClicked"><i class="fa fa-cogs" title="Save"></i></Blazorise.Button>
-                <Blazorise.Button tabindex="0" Color="Color.Success" Clicked="CopyClicked"><i class="fa fa-copy" title="Copy"></i></Blazorise.Button>
-                <Blazorise.Button tabindex="0" Color="Color.Danger" Clicked="ResetClicked"><i class="fa fa-times" title="Reset"></i></Blazorise.Button>
-                <Blazorise.Button tabindex="0" Color="Color.Warning" Clicked="SaveClicked"><i class="fa fa-save" title="Save"></i></Blazorise.Button>
+                <Blazorise.Button Color="Color.Primary" Clicked="GenerateClicked"><i class="fa fa-cogs" title="Save"></i></Blazorise.Button>
+                <Blazorise.Button Color="Color.Success" Clicked="CopyClicked"><i class="fa fa-copy" title="Copy"></i></Blazorise.Button>
+                <Blazorise.Button Color="Color.Danger" Clicked="ResetClicked"><i class="fa fa-times" title="Reset"></i></Blazorise.Button>
+                <Blazorise.Button Color="Color.Warning" Clicked="SaveClicked"><i class="fa fa-save" title="Save"></i></Blazorise.Button>
             </Column>
         </Row>
     </EditForm>
